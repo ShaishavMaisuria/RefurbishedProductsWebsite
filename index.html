@@ -1,30 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<title> Refurbished Headphones</title>
 	<link rel = "stylesheet" href="assests/style.css">
-<!-- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
-	<script src="assests/javascript.js"></script> -->
 </head>
 <body>
 	<header>
-		<div class= "container">
-			<div class="userNav">
-				<ul >
+		
+		<div class="userNav">
+			<ul >
 
-					<li class="logo"> <a href="index.html"><img src="assests/image/logo.jpg"> </a> </li>
+				<li class="logo"> <a href="index.html"><img src="assests/image/logo.jpg" alt="logo"> </a> </li>
 
-					<li class="animate"><a href="#"> Sign Up  </a> </li>
+				<li class="animate"><a href="#"> Sign Up  </a> </li>
 
-					<li class="animate"><a href="#"> Log in</a></li>
-					<li class="animate"> <a href="newTrade.html">   Start Trading </a> </li>
-				</ul>
-			</div>
+				<li class="animate"><a href="#"> Log in</a></li>
+				<li class="animate"> <a href="newTrade.html">   Start Trading </a> </li>
+			</ul>
 		</div>
+		
 	</header>
-<hr>
+	<hr>
 	<nav>
-		<div class="novContents">
+		<div class="navContents">
 
 			<ul class="siteNav">
 				<li> <a class="active" href="#"> Homes </a> </li>
@@ -34,9 +36,9 @@
 
 	</nav>
 
-	<article class="main">
-		<div class="jump">
-
+	<article class="indexMain">
+		<div class="svgAnimation">
+			<!-- SVG that I used in the html is the only way I was able to do it, I was not able to put attributes in css, I already talked to professor she told to put such a note. (index.html) -->
 			
 			<svg viewbox="100 100 270 300">
 				<defs>
@@ -49,7 +51,7 @@
 							<animateTransform
 							attributeName="transform"
 							begin="0s"
-							dur="1.5s"
+							dur="1.4s"
 							type="translate"
 							from="0,0"
 							to="40,0"
@@ -57,27 +59,28 @@
 						</path>
 					</pattern>
 				</defs>
-				<text class="loadingOn"  x="190" y="115" fill="url(#wave)" font-size="20">Refurbished Gadgets</text>
-				<text class="loadingOff" x="190" y="115"  fill="url(#gradient)"  font-size="20" >Refurbished Gadgets</text>
-					<text class="loadingOn1"  x="190" y="135" fill="url(#wave)" font-size="16">We Sell the Value</text>
-				<text class="loadingOff1" x="190" y="135"  fill="url(#gradient)"  font-size="16" >We Sell the Value</text>
+				<text class="loadingOn"  x="190" y="115" fill="url(#wave)" >Refurbished Gadgets</text>
+				
+				<text class="loadingOff" x="190" y="115"  fill="url(#gradient)"   >Refurbished Gadgets</text>
+				
+				<text class="loadingOn1"  x="190" y="135" fill="url(#wave)" >We Sell the Value</text>
+				
+				<text class="loadingOff1" x="190" y="135"  fill="url(#gradient)"   >We Sell the Value</text>
 			</svg>
 		</div>
 
 	</article>
 
 	<footer>
-		<div class="container">
 
-			<div class="footerLinks">
-				<ul class="siteFooter">
-					<li class="copyright"> <p> &copy; Niner Book Trade </p> </li>
-					<li> <a  href="#"> About </a> </li>
-					<li > <a  href="#"> Contact </a> </li>
-				</ul>
-			</div>
-		</div> 
-
+		<div class="footerLinks">
+			<ul class="siteFooter">
+				<li class="copyright"> <p> &copy; Niner Book Trade </p> </li>
+				<li> <a  href="#"> About </a> </li>
+				<li > <a  href="#"> Contact </a> </li>
+			</ul>
+		</div>
+		
 	</footer>
 
 </body>

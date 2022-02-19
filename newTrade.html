@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
 	<title>New Trade</title>
 	<link rel = "stylesheet" href="assests/style.css">
 </head>
@@ -10,12 +14,12 @@
 			<div class="userNav">
 				<ul >
 
-					<li class="logo"> <a href="index.html"><img src="assests/image/logo.jpg"> </a> </li>
+					<li class="logo"> <a href="index.html"><img src="assests/image/logo.jpg" alt="Logo"> </a> </li>
 					
 					<li class="animate"><a href="#"> Sign Up  </a> </li>
 
 					<li class="animate"><a href="#"> Log in</a></li>
-					<li class="active"> <a href="#">   Start Trading </a> </li>
+					<li > <a  class="active" href="#">   Start Trading </a> </li>
 				</ul>
 			</div>
 		</div>
@@ -33,49 +37,49 @@
 	</nav>
 
 	<article class="newTradesMain">
-		<center>
-			<div class="container">
-  <form action="/action_page.php">	
-  <div class="row">
-    <div class="col-25">
-      <label for="fname">Category</label>
+		<div class="newTrades">
+	<h1> Create New Trade</h1>
+			<!-- <div class="container"> -->
+  <form action="trades.html" >	
+  <div class="eachRow">
+    <div class="firstColumn">
+      <label for="CategoryName">Category</label>
     </div>
-    <div class="col-75">
-      <input type="text" id="fname" name="firstname" placeholder="Category">
+    <div class="secondColumn">
+      <input type="text" id="CategoryName" name="CategoryName" placeholder="Category">
     </div>
   </div>
   
-  <div class="row">
-    <div class="col-25">
-      <label for="lname">Title</label>
+  <div class="eachRow">
+    <div class="firstColumn">
+      <label for="title">Title</label>
     </div>
-    <div class="col-75">
-      <input type="text" id="lname" name="lastname" placeholder="Title">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="lname">Author</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="lname" name="lastname" placeholder="Author">
+    <div class="secondColumn">
+      <input type="text" id="title" name="title" placeholder="Title">
     </div>
   </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="subject">Details</label>
+  <div class="eachRow">
+    <div class="firstColumn">
+      <label for="author">Author</label>
     </div>
-    <div class="col-75">
-      <textarea id="subject" name="subject" placeholder="detail" style="height:200px"></textarea>
+    <div class="secondColumn">
+      <input type="text" id="author" name="author" placeholder="Author">
+    </div>
+  </div>
+  <div class="eachRow">
+    <div class="firstColumn">
+      <label for="details">Details</label>
+    </div>
+    <div class="secondColumn">
+      <textarea id="details" name="details" placeholder="Detail"></textarea>
     </div>
   </div>
   <br>
-  <div class="row">
-    <input type="submit" value="Submit">
+  <div class="eachRow">
+    <input type="submit" value="Create Table"> 
   </div>
   </form>
-</div>
-		</center>
+	</div>
 		
 	</article>
 
@@ -90,6 +94,6 @@
 				</ul>
 			</div>
 		</div> 
-
+		</footer>
 </body>
 </html>

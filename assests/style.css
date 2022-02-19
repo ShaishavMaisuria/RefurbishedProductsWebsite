@@ -2,28 +2,30 @@
   margin: 0;
   height: 100%;
   width: 100%;
-  background-color: #F8F6F6;
- 
+  background-color: #F4F5FF;
+font-family: Arial, sans-serif;
 }
+/********************************* Header,Navigation, and Footer common all pages****************************/
 /*for header user Nav , navigation bar site nav*/
 .userNav{
  padding-top: 5px;
-height: 60px;
+ height: 60px;
 }
 ul.siteNav, .userNav ul{
-  height: 100%;
-  width: 100%;
-  list-style-type: none;
-  margin: 0;
-  padding-left: 2px;
-  padding-right: 2px:
-  padding-top:0;
-  padding-bottom: 0; 
-  overflow: hidden;
-  background-color: #F8F6F6 ;
+height: 100%;
+width: 100%;
+list-style-type: none;
+margin: 0;
+padding-left: 2px;
+padding-right: 2px;
+padding-top:0;
+padding-bottom: 0;
+overflow: hidden;
+background-color: #F4F5FF ;
 }
 
 /*making sure userNav is on right side*/
+/*SiteNavigation CSS*/
 ul.siteNav li {float: left;}
 
 ul.siteNav li a, .userNav li a {
@@ -41,7 +43,11 @@ ul.siteNav li a.active {background-color: black; color: white;}
 
 /*making sure siteNav is on right side to select button*/
 ul.siteNav li.right {float: right;}
-.userNav li a:hover{background-color: black;color: white;}
+
+/*UserNavigation CSS*/
+.userNav li a:hover:not(.active) {background-color: black; color:white;}
+
+.userNav li a.active {background-color: black; color: white;}
 .userNav li { float:right; }
 
 /*making sure userNav is on left side to select button*/
@@ -51,7 +57,7 @@ ul.siteNav li.right {float: right;}
   float: left;
 }
 
-/*logo animation*/
+/*logo animation and logo attributes*/
 .logo{
   position: absolute;
   border: 1px solid gray;
@@ -63,15 +69,16 @@ ul.siteNav li.right {float: right;}
   animation-delay: 0.5s;
   visibility: hidden;
   animation-fill-mode: forwards;
-/*  background-image: url("image/logo.png");*/
+
 }
 .logo img{
 
   height: 100%;
   width: 100%;
-    /*background-image: url("image/logo.png");*/
-
 }
+.userNav li.logo a:hover{background-color: #F4F5FF;}
+
+/*logo animation action keyframe*/
 @keyframes comeDown{
   0%{
     transform: translateY(-100px);
@@ -83,18 +90,18 @@ ul.siteNav li.right {float: right;}
   }
 }
 
-/*footer code*/
+/*footer code: applying css to list similar code as header but with changes*/
 ul.siteFooter {
   height: 100%;
   width: 100%;
   list-style-type: none;
   margin: 0;
   padding-left: 2px;
-  padding-right: 2px:
+  padding-right: 2px;
   padding-top:0;
-  padding-bottom: 0; 
+  padding-bottom: 0;
   overflow: hidden;
-  background-color: #F8F6F6 ;
+  background-color: #F8F6F6;
 }
 
 /*making sure userNav is on right side*/
@@ -108,9 +115,9 @@ ul.siteFooter li a {
   padding: 10px 15px;
   text-decoration: none;
 }
+
 /*use for copyright design*/
 .copyright p{
-
   padding:10px 15px;
   margin:0;
 }
@@ -128,84 +135,36 @@ footer{
 
 }
 
+/*********************************************Index.html CSS***************************************/
 /*main content area*/
 
-.main{
-
+.indexMain{
   position:  relative;
   padding: 50px;
   margin: 0;
   margin-bottom: 10px;
   max-width: 100%;
   max-height: 100%;
-  /*background-color: black;*/ 
-  /*cover background*/
   background-image: url("image/backGroundwallpaper.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   overflow: hidden;
-
 }
-
-/** {
-  box-sizing: border-box;
-}
-
-.main {
-  font-family: "IBM Plex Sans Roman", Times;
-  display: block;
-  align-items: left;
-  justify-content: center;
-  text-align: left;
-  min-height: 20vh;
-  background-color: #B2DFDB;
-}
-*/
-/*----*/
-/*@font-face {
-  font-family: "IBM Plex Sans Roman";
-  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/85648/IBMPlexSansVar-Roman.ttf");
-}
-.jump h1  {
-  font-weight: 100;
-  font-size: 5vw;
-  font-variation-settings: 'wght' 100, 'wdth' 85;
-  animation: breathe 6000ms infinite forwards;
-}
-.jump h2  {
-  font-weight: 100;
-  font-size: 5vw;
-  font-variation-settings: 'wght' 100, 'wdth' 85;
-  animation: breathe 6000ms infinite forwards;
-}
-
-
-@keyframes breathe {
-  60% {
-    font-variation-settings: 'wght' 500, 'wdth' 10;
-  }
-  
-  100% {
-    font-variation-settings: 'wght' 50, 'wdth' 45;
-  }
-  }*/
 
 /*to bring the svg down use this class*/
-  .jump{
-    position: relative;
-    margin-top: 12%;
-    margin-left: 0;
-  }
+.svgAnimation{
+  position: relative;
+  margin-top: 12%;
+  margin-left: 0;
+}
 
-  svg{font-weight:bold;width:auto;max-height:1800px;
-/*animation: comeXSide 2s linear 1;
-  animation-delay: 0.5s;
-  visibility: hidden;
-  animation-fill-mode: forwards;*/
+svg{
+  font-weight:bold;width:auto;max-height:1800px;
 
-  }
-  @keyframes comeXSide{
+}
+
+@keyframes comeXSide{
   0%{
     transform: translateX(-1200px);
     visibility: visible;
@@ -216,57 +175,47 @@ footer{
   }
 }
 
-  .loadingOn{
-   text-anchor: middle;
 
-   /*font-size:1.2em;*/
+.loadingOn{
+ text-anchor: middle;
+ fill-opacity:0.8 ; 
+ animation: comeXSide 1s linear 1;
+ animation-delay: 0.3s;
+ visibility: hidden;
+ animation-fill-mode: forwards;
+ 
+}
 
-   fill-opacity:0.8 ; 
-  animation: comeXSide 1s linear 1;
-  animation-delay: 0.3s;
-  visibility: hidden;
-  animation-fill-mode: forwards;
- }
+.loadingOff{
+ text-anchor: middle;
+ fill-opacity:0.8 ; 
+ animation: comeXSide 1s linear 1;
+ animation-delay: 0.3s;
+ visibility: hidden;
+ animation-fill-mode: forwards;
+ 
+}
 
-   .loadingOff{
+.loadingOn1{
+ text-anchor: middle;
+ fill-opacity:0.8 ; 
+ animation: comeXSideOne 1s linear 1;
+ animation-delay: 0.1s;
+ visibility: hidden;
+ animation-fill-mode: forwards;
 
-     text-anchor: middle;
+}
 
-     /*font-size:1.2em;*/
-
-     fill-opacity:0.8 ; 
-  animation: comeXSide 1s linear 1;
-  animation-delay: 0.3s;
-  visibility: hidden;
-  animation-fill-mode: forwards;
-   }
-
-   .loadingOn1{
-   text-anchor: middle;
-
-   /*font-size:1.2em;*/
-
-   fill-opacity:0.8 ; 
-  animation: comeXSideOne 1s linear 1;
-  animation-delay: 0.1s;
-  visibility: hidden;
-  animation-fill-mode: forwards;
- }
-
-   .loadingOff1{
-
-     text-anchor: middle;
-
-     /*font-size:1.2em;*/
-
-     fill-opacity:0.5;
-     fill-opacity:0.8 ; 
-  animation: comeXSideOne 1s linear 1;
-  animation-delay: 0.1s;
-  visibility: hidden;
-  animation-fill-mode: forwards;
-   }
-   @keyframes comeXSideOne{
+.loadingOff1{
+ text-anchor: middle;
+ fill-opacity:0.5;
+ fill-opacity:0.8 ; 
+ animation: comeXSideOne 1s linear 1;
+ animation-delay: 0.1s;
+ visibility: hidden;
+ animation-fill-mode: forwards;
+}
+@keyframes comeXSideOne{
   0%{
     transform: translateX(-1200px);
     visibility: visible;
@@ -279,23 +228,43 @@ footer{
 
 
 
-
+/**************************************Trades.html CSS******************************************/
 /* The CSS of Trades. html*/
+.tradesMain{ 
+  margin-bottom: 10px; 
+  padding-bottom: 100px;
+  align-content: center;
+  text-align: center;
+}
 
-.card {
+/*grid view headphones*/
+.grid-container-headphones {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+/*grid view laptop*/
+.grid-container-laptop{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+/*each card view*/
+.cardView {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
   text-align: center;
   font-family: arial;
 }
-
-.price {
+.cardView img{
+  width:100%;
+}
+.cost {
   color: grey;
   font-size: 22px;
 }
 
-.card button {
+.cardView a.buttonViewDetails {
   border: none;
   outline: 0;
   padding: 12px;
@@ -307,21 +276,11 @@ footer{
   font-size: 18px;
 }
 
-.card button:hover {
+.cardView a.buttonViewDetails:hover {
   opacity: 0.7;
 }
 
-/*grid view headphones*/
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-}
-.tradesMain{ 
-margin-bottom: 10px; 
-padding-bottom: 100px;
-}
-
-
+/***************************************************** Trade.html CSS ******************************************************************/
 
 /*trade html css*/
 
@@ -329,57 +288,34 @@ padding-bottom: 100px;
   margin: 0;
   max-height: 100%;
   display: grid;
-  grid-template-columns: auto auto;
-  /*border: 2px solid black;*/
+  grid-template-columns: 60% 40%;
   margin: auto;
+  align-items: center;
+  justify-content: center;
 }
-
-.tradeImg{
-
-  width: 70%;
-  height: 100%;
-  margin: 10px 10px;
-  /*margin-top:10%;*/
-
+.tradeImage{
+    max-width: 100%;
+  max-height: 100%;
+  display: grid;
 }
-.tradeImg img{
-  margin: 10px 20px;
-  width: 400px;
-  height: 400px;
-
-animation: comeXSideOne 1s linear 1;
-  animation-delay: 0.1s;
-  visibility: hidden;
-  animation-fill-mode: forwards;
-   }
-   
-#TradeName {
+.img-details {
+  max-width: 100%;
+  max-height: 100%;
   text-align: center;
-  /*margin-left:  90px;*/
+  align-items: center;
+  justify-content: center;
 }
 
-.review{
-  margin: 15px; 
-  padding:20px;
-  height: 100px;
-  font-size: 20px;
-  /*background-color: blue;*/
+.img-details img{
+  max-width: 100%;
+  max-height: 100%;
 }
-
-.buttonReview {
-  margin: auto;
-  padding: 12px;
-
-  background-color: white;
-  color: black;
-  /*border: 2px solid #555555;*/
-border-radius: 5px;
-}
-
-.buttonReview:hover {
-  background-color: #555555;
-  color: white;
-  border-radius: 5px;
+.tradeImage {
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 .hrdesign { 
   height: 30px; 
@@ -399,8 +335,62 @@ border-radius: 5px;
   border-radius: 20px; 
 }
 
+.detail{
+  margin:auto;
+  width: 90%;
+  font-size: 18px;
+  max-height: inherit;
+  overflow: hidden;
+}
+.detail h1{
+  font-size: 22px;
+}
 
-.button {
+.reviewContents{
+  margin: 0px 100px;
+}
+.review{
+  margin: 15px; 
+  padding:20px;
+  height: 100px;
+  font-size: 20px;
+}
+
+.buttonGrid{
+  display: flex;
+  float: left;
+}
+
+.buttonReviewTrade {
+  margin: auto;
+  padding: 12px;
+  background-color: #90ee90;
+  color: black;
+  border-radius: 5px;
+}
+
+.buttonReviewTrade:hover {
+  background-color: #555555;
+  color: white;
+  border-radius: 5px;
+}
+
+.buttonReviewRate{
+  margin: auto;
+  padding: 12px;
+  background-color: lightblue;
+  color: black;
+  border-radius: 5px;
+}
+
+.buttonReviewRate:hover {
+  background-color: #555555;
+  color: white;
+  border-radius: 5px;
+}
+
+
+.a {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
@@ -416,45 +406,29 @@ border-radius: 5px;
 }
 
 
-.detail{
-  margin:auto;
-  width: 90%;
-  font-size: 18px;
-  max-height: inherit;
-  /*background-color: green;*/
-  overflow: hidden;
-}
-.detail h1{
-  font-size: 22px;
-}
-
-.buttonGrid{
-  display: flex;
-  float: left;
-}
-
-.detailContents{
-  margin: 0px 100px;
-   /*border: 2px solid black;*/
-  /*background-color: yellow;*/
-
-}
 
 /*NewTrades Html css*/
-
-/*https://www.w3schools.com/css/tryit.asp?filename=trycss_form_responsive*/
+/************************************* NEW Trades.Html CSS ***************************************************/
+/* Taken and referenced from: https://www.w3schools.com/css/tryit.asp?filename=trycss_form_responsive*/
 
 .newTradesMain {
   box-sizing: border-box;
   padding: 0%  20%;
-}
+  text-align: left;
 
+}
+.newTrades h1{
+  font-size: 35px;
+  align-content: center;
+  text-align: center;
+}
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
+  float: right;
 }
 
 label {
@@ -462,8 +436,9 @@ label {
   display: inline-block;
 }
 
-input[type=submit] {
-  background-color: #4CAF50;
+input[type=submit]
+{
+  background-color: black;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -472,32 +447,31 @@ input[type=submit] {
   float: right;
 }
 
-input[type=submit]:hover {
-  background-color: #45a049;
+input[type=submit]:hover
+{
+  background-color: white;
+  color:black;
 }
 
-.container {
-  border-radius: 5px;
-  /*background-color: #f2f2f2;*/
-  /*padding: 50px;*/
-}
-
-.col-25 {
+.firstColumn{
   float: left;
-  width: 25%;
-  margin-top: 6px;
+  width: 35%;
+  margin-top: 6.5px;
 }
 
-.col-75 {
+.secondColumn {
   float: left;
-  width: 75%;
-  margin-top: 6px;
+  width: 65%;
+  margin-top: 6.5px;
 }
 
 /* Clear floats after the columns */
-.row:after {
+.eachRow:after {
   content: "";
   display: table;
   clear: both;
 }
 
+#details{
+  height:200px;
+}
